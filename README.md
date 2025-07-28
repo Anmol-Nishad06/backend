@@ -44,4 +44,25 @@
                     ] 
             <ls>Save everthing and it's all set to go  </ul>
     </ol>      
+
+<h3>Steps to install Tailwind:- </h3>
+    <ol>
+        <ls>Run "python -m pip install django-tailwind" command interminal to initiate tailwind download.    </ls> 
+        <ls> Now run "python -m pip install 'django-tailwind[reload]'" in terminal to download auto reload package</ls>
+        <ls>Now go to the setting.py file in core folder and add 'tailwind' in the installed app option </ls> 
+        <ls>Now to download css theme file into folder run "python manage.py tailwind init" </ls>
+        <ls> Now go to the setting.py file in core folder and add 'theme' or the name of the file you gave in the installed app option </ls> 
+        <ls> Register the generated 'theme' app by adding the following line to settings.py:
+            [TAILWIND_APP_NAME = 'theme']</ls> 
+        <ls>Install Tailwind CSS dependencies by running "python manage.py tailwind install" </ls>
+        <ls>Now go to the setting.py file in core folder and add '"django_browser_reload.middleware.BrowserReloadMiddleware"'in the MIDDLEWARE option (it will help in auto reload).  </ls></ol>
+
+<h3>How to use tailwind :-</h3>
+    <ol>
+    <ls>To use tailwind in your layout add a load tag on top as {%load static tailwind_tag %} </ls>
+    <ls>Now add link to tailwind css in head section as {% tailwind_css %}</ls></ol>
+
+<h3>How to run tailwind:-</h3>
+    <p>to run tailwind use to different server one for python and another for tailwind by creating a new terminal run "python manage.py tailwind dev" so the tailwind server will work  simultaneously with python one</p>
+
         <p\>      
