@@ -1,7 +1,16 @@
 {% extends "layout.html" %}
 from .models import Technologies
-{% block title %} {{tech.name}} {% endblock %}
+{% block title %} Detail/{{tech.name}} {% endblock %}
 {% block heading %} <h1> welcome to the first page  </h1> {% endblock %}
 {% block content %} 
     <p>Detail page goes here...</p>
+    <div class="flex flex-col items-center justify-center">
+        <p>{{tech.name}}</p>
+        <img class="h-96 align-middle" src="{{ tech.image.url }}" alt="">
+        <h3>${{tech.price}}</h3>
+    </div>
+    <div class="mt-4">
+        <h2>Description</h2>
+        <p>{{ tech.discription }}</p>   
+    </div>
 {% endblock %}

@@ -8,9 +8,7 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-blue-300: oklch(80.9% 0.105 251.813);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-gray-50: oklch(98.5% 0.002 247.839);
@@ -206,11 +204,14 @@
       max-width: 96rem;
     }
   }
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .block {
     display: block;
@@ -218,17 +219,38 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
   }
   .h-screen {
     height: 100vh;
   }
+  .w-0\.5 {
+    width: calc(var(--spacing) * 0.5);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .columns-1 {
+    columns: 1;
+  }
   .columns-2 {
     columns: 2;
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .columns-4 {
+    columns: 4;
+  }
+  .columns-5 {
+    columns: 5;
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -242,20 +264,17 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .bg-blue-200 {
-    background-color: var(--color-blue-200);
-  }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
-  }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
   }
   .bg-blue-900 {
     background-color: var(--color-blue-900);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .align-middle {
+    vertical-align: middle;
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -288,8 +307,18 @@
     }
   }
   @media (width >= 48rem) {
+    .md\:columns-2 {
+      columns: 2;
+    }
+  }
+  @media (width >= 48rem) {
     .md\:columns-3 {
       columns: 3;
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:columns-1 {
+      columns: 1;
     }
   }
   @media (width >= 64rem) {
@@ -298,8 +327,8 @@
     }
   }
   @media (width >= 64rem) {
-    .lg\:columns-4 {
-      columns: 4;
+    .lg\:columns-3 {
+      columns: 3;
     }
   }
 }

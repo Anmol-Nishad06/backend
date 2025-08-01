@@ -8,5 +8,5 @@ def first(request):
     return render(request, 'app1/first.html' , {'techs': tech})
 
 def detail(request, tech_id):
-    techs = get_object_or_404(Technology, id=tech_id)
-    return render(request, 'app1/detail.html', {'tech': techs})
+    tech = get_object_or_404(Technology, id=tech_id)
+    return render(request, 'app1/detail.html', {'tech': tech})
