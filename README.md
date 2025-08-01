@@ -65,4 +65,6 @@
 <h3>How to run tailwind:-</h3>
     <p>to run tailwind use to different server one for python and another for tailwind by creating a new terminal run "python manage.py tailwind dev" so the tailwind server will work  simultaneously with python one</p>
 
+
+
         <p\>      

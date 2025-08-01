@@ -2,5 +2,16 @@
 {% block title %}first{% endblock %}
 {% block heading %} <h1> welcome to the first page  </h1> {% endblock %}
 {% block content %} 
-<p>Content for the first page goes here...</p>
+    <p>Content for the first page goes here...</p>
+    <div class="columns-2 md:columns-3 lg:columns-2 gap-4">
+        <h2>Technologies</h2>
+    {% for tech in techs %}
+        <div class="tech-item">
+            <h1 class="bg-blue-900" >{{ tech.name }}</h1>
+            <a href="{% url 'detail' tech.id %}">
+                <img  class="rounded shadow-blue-950 " src="{{tech.image.url}}" alt="">
+            </a> 
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}
